@@ -11,60 +11,92 @@
             font-family: 'Roboto', sans-serif;
             background-color: #eaf7e6;
             color: #333;
-            margin: 0;
         }
         .navbar {
             background-color: #388E3C;
         }
-        .navbar-brand, .nav-link {
-            color: white !important;
+        .navbar-brand, .navbar-nav .nav-link {
+			padding-left: 25px;
+            color: green;
         }
-        .navbar-brand:hover, .nav-link:hover {
-            color: #C8E6C9 !important;
+        .navbar-nav .nav-link:hover {
+            color: #000;
         }
-        header {
-            background-color: #388E3C;
+        .hero-section {
+            background-image: url('Images/Banner.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 30px 0;
             text-align: center;
+            padding: 100px 20px;
         }
-        header h1 {
+        .hero-section h1 {
             font-family: 'Lora', serif;
-            font-size: 36px;
-            margin: 0;
+            font-size: 48px;
+			color: green;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero-section p {
+            font-size: 18px;
+            margin: 20px 0;
+			color: green;
+        }
+        .hero-section .btn {
+            font-size: 18px;
+            padding: 10px 20px;
         }
         .container {
             margin-top: 30px;
-            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-family: 'Lora', serif;
+            color: #388E3C;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border: 1px solid #388E3C;
+            background-color: #f0f4f0;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 3px rgba(56, 142, 60, 0.5);
+            border-color: #388E3C;
         }
         .seed-card {
             border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
-        .seed-card h3 {
-            color: #388E3C;
-            font-family: 'Lora', serif;
+        .seed-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
-        .btn-primary {
+        .seed-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-primary, .btn-success {
             background-color: #388E3C;
             border: none;
         }
-        .btn-primary:hover {
+        .btn-primary:hover, .btn-success:hover {
             background-color: #2E7D32;
         }
-        footer {
-            background-color: #eeeeee;
+        .footer {
+            background-color: #388E3C;
+            color: white;
             text-align: center;
-            padding: 20px 0;
-            font-size: 14px;
-            margin-top: 20px;
-        }
-        .footer a {
-            color: #388E3C;
+            padding: 15px 0;
+            margin-top: 30px;
         }
     </style>
 </head>

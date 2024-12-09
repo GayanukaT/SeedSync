@@ -198,9 +198,7 @@
         </div>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 SeedSync Marketplace</p>
-    </footer>
+    <?php renderFooter(); ?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

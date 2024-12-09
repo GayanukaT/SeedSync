@@ -18,4 +18,12 @@ function renderHeader() {
         </div>
     </nav>';
 }
+
+function renderFooter() {
+    echo '
+    <footer class="footer">
+        <p>&copy; ' . date("Y") . ' SeedSync Marketplace</p>
+    </footer>';
+}
+
 ?>

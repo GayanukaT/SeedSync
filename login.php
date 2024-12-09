@@ -60,9 +60,6 @@
 </head>
 <body>
 
-<?php include 'func/functions.php'; ?>
-<?php renderHeader(); ?>
-
     <div class="login-container">
         <h1>Login to SeedSync</h1>
         <form>

@@ -60,9 +60,6 @@
 </head>
 <body>
 
-<?php include 'func/functions.php'; ?>
-<?php renderHeader(); ?>
-
     <div class="signup-container">
         <h1>Create Your Account</h1>
         <form>

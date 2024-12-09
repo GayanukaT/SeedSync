@@ -10,7 +10,7 @@ function renderHeader() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="item.html">Seeds</a></li>
+                    <li class="nav-item"><a class="nav-link" href="item.php">Seeds</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">Log In</a></li>
                     <li class="nav-item"><a class="nav-link" href="signup.php">Sign Up</a></li>
                 </ul>

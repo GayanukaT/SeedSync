@@ -88,7 +88,7 @@ try {
         $_SESSION['email'] = $user['email'];
 
         echo "Login successful. Redirecting to your dashboard...";
-        header("Location: dashboard.php");
+        header("Location: index.php");
         exit;
     }
 

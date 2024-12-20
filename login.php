@@ -62,16 +62,16 @@
 
     <div class="login-container">
         <h1>Login to SeedSync</h1>
-        <form>
+        <form action="backend.php" method="POST">
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <button type="submit" class="btn btn-primary btn-block" name="login">Login</button>
             <div class="text-center mt-3">
                 <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
             </div>

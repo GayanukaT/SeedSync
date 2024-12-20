@@ -62,7 +62,7 @@
 
     <div class="login-container">
         <h1>Login to SeedSync</h1>
-        <form action="backend.php" method="POST">
+        <form action="conf/dbconf.php" method="POST">
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>

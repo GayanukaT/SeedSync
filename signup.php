@@ -62,7 +62,7 @@
 
     <div class="signup-container">
         <h1>Create Your Account</h1>
-        <form action="backend.php" method="POST">
+        <form action="conf/dbconf.php" method="POST">
             <div class="form-group">
                 <label for="fullName">Full Name</label>
                 <input type="text" class="form-control" id="fullName" name="full_name" placeholder="Enter your full name" required>

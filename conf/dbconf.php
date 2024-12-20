@@ -48,7 +48,7 @@ try {
         $stmt = $connect->prepare("INSERT INTO users (full_name, email, password_hash) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $full_name, $email, $password_hash);
         if ($stmt->execute()) {
-            echo "User registered successfully. You can now <a href='login.php'>login</a>.";
+            header("Location: ../index.php");
         } else {
             echo "Error: " . $stmt->error;
         }

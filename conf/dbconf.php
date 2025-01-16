@@ -92,7 +92,6 @@ try {
         exit;
     }
 
-    $connect->close();
 }
 catch (Exception $e){
     die($e->getMessage());

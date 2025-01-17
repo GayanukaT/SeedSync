@@ -4,10 +4,8 @@ include 'func/functions.php';
 
 renderHeader();
 
-// Initialize variables
 $searchResults = [];
 
-// Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $season = $_POST['season'] ?? '';
     $landArea = $_POST['landArea'] ?? '';
@@ -18,12 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "SELECT * FROM seeds WHERE 1 = 1";
 
-    // Append conditions based on user input
     if (!empty($season)) $query .= " AND season = '$season'";
     if (!empty($soilCondition)) $query .= " AND soil_condition = '$soilCondition'";
     if (!empty($cropType)) $query .= " AND category = '$cropType'";
 
-    // Execute query
     $result = mysqli_query($connect, $query);
     if ($result) {
         $searchResults = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -32,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Close the connection
 mysqli_close($connect);
 ?>
 

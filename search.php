@@ -1,26 +1,41 @@
 <?php
 include 'conf/dbconf.php';
 include 'func/functions.php';
-
 renderHeader();
 
 $searchResults = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $season = $_POST['season'] ?? '';
-    $landArea = $_POST['landArea'] ?? '';
-    $location = $_POST['location'] ?? '';
-    $soilCondition = $_POST['soilCondition'] ?? '';
-    $cropType = $_POST['cropType'] ?? '';
-    $quantity = $_POST['quantity'] ?? '';
+    $season = mysqli_real_escape_string($connect, $_POST['season'] ?? '');
+    $landArea = mysqli_real_escape_string($connect, $_POST['landArea'] ?? '');
+    $location = mysqli_real_escape_string($connect, $_POST['location'] ?? '');
+    $soilCondition = mysqli_real_escape_string($connect, $_POST['soilCondition'] ?? '');
+    $cropType = mysqli_real_escape_string($connect, $_POST['cropType'] ?? '');
+    $quantity = mysqli_real_escape_string($connect, $_POST['quantity'] ?? '');
 
     $query = "SELECT * FROM seeds WHERE 1 = 1";
 
-    if (!empty($season)) $query .= " AND season = '$season'";
-    if (!empty($soilCondition)) $query .= " AND soil_condition = '$soilCondition'";
-    if (!empty($cropType)) $query .= " AND category = '$cropType'";
+    if (!empty($season)) {
+        $query .= " AND season = '$season'";
+    }
+    if (!empty($soilCondition)) {
+        $query .= " AND soil_condition = '$soilCondition'";
+    }
+    if (!empty($cropType)) {
+        $query .= " AND category = '$cropType'";
+    }
+    if (!empty($location)) {
+        $query .= " AND location LIKE '%$location%'";
+    }
+    if (!empty($landArea)) {
+        $query .= " AND land_area >= '$landArea'";
+    }
+    if (!empty($quantity)) {
+        $query .= " AND quantity >= '$quantity'";
+    }
 
     $result = mysqli_query($connect, $query);
+
     if ($result) {
         $searchResults = mysqli_fetch_all($result, MYSQLI_ASSOC);
     } else {

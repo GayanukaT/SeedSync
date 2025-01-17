@@ -24,53 +24,54 @@
     <div class="container" id="searchForm">
         <h2>Search for Seeds</h2>
         <form method="POST" action="search.php">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="season">Season</label>
-                    <select class="form-control" id="season">
-                        <option value="" selected>Choose...</option>
-                        <option value="maha">Maha (Oct - Mar)</option>
-                        <option value="yala">Yala (Apr - Sep)</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="landArea">Land Area (acres)</label>
-                    <input type="number" class="form-control" id="landArea" placeholder="e.g., 2" min="1">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="location">Location</label>
-                    <input type="text" class="form-control" id="location" placeholder="e.g., Colombo">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="soilCondition">Soil Condition</label>
-                    <select class="form-control" id="soilCondition">
-                        <option value="" selected>Choose...</option>
-                        <option value="loamy">Loamy</option>
-                        <option value="sandy">Sandy</option>
-                        <option value="clay">Clay</option>
-                        <option value="saline">Saline</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="cropType">Crop Type</label>
-                    <select class="form-control" id="cropType">
-                        <option value="" selected>Choose...</option>
-                        <option value="vegetables">Vegetables</option>
-                        <option value="fruits">Fruits</option>
-                        <option value="grains">Grains</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="quantity">Quantity (kg)</label>
-                    <input type="number" class="form-control" id="quantity" placeholder="e.g., 50" min="1">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Find Seeds</button>
-        </form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="season">Season</label>
+            <select class="form-control" id="season" name="season">
+                <option value="" selected>Choose...</option>
+                <option value="maha">Maha (Oct - Mar)</option>
+                <option value="yala">Yala (Apr - Sep)</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="landArea">Land Area (acres)</label>
+            <input type="number" class="form-control" id="landArea" name="landArea" placeholder="e.g., 2" min="1">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="location" name="location" placeholder="e.g., Colombo">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="soilCondition">Soil Condition</label>
+            <select class="form-control" id="soilCondition" name="soilCondition">
+                <option value="" selected>Choose...</option>
+                <option value="loamy">Loamy</option>
+                <option value="sandy">Sandy</option>
+                <option value="clay">Clay</option>
+                <option value="saline">Saline</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="cropType">Crop Type</label>
+            <select class="form-control" id="cropType" name="cropType">
+                <option value="" selected>Choose...</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="grains">Grains</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="quantity">Quantity (kg)</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="e.g., 50" min="1">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Find Seeds</button>
+</form>
+
     </div>
 
     <div class="container mt-4">
